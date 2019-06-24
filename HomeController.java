@@ -13,10 +13,10 @@ import org.springframework.web.servlet.ModelAndView;
 /////////////////////////////////
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+////////////////////
 import com.ejemplos.spring.model.User;
 import com.ejemplos.spring.services.UserService;
-
+.................................
 @Controller
 public class HomeController {
 	
