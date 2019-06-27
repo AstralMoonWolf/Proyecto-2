@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.lucatinder.model.User;
 @Repository
-public interface IUserRepository extends JpaRepository<User,Integer>,UserRepositoryCustom{
+public interface IUserRepository extends JpaRepository<User,Integer>,IUserRepositoryCustom{
 
 }
