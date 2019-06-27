@@ -32,9 +32,13 @@ public class UserServiceImpl implements IUserService {
 		userDAO.save(user);
 	}
 	
+	/**
+	 * Este metodo hay que ver si esta bien ***********DUDA***************
+	 */
+	
 	@Override
 	public void login(int id) {
-		
+		userDAO.login(id);
 	}
 	
 }

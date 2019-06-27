@@ -16,4 +16,6 @@ import com.lucatinder.model.User;
 @Repository
 public interface IUserRepository extends JpaRepository<User,Integer>,IUserRepositoryCustom{
 
+	public void login(int id);
+
 }
