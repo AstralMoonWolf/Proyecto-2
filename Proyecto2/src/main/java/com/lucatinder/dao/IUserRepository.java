@@ -1,5 +1,10 @@
 package com.lucatinder.dao;
 
-public interface IUserRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.lucatinder.model.User;
+@Repository
+public interface IUserRepository extends JpaRepository<User,Integer>,UserRepositoryCustom{
 
 }
