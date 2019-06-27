@@ -40,5 +40,10 @@ public class UserServiceImpl implements IUserService {
 	public void login(int id) {
 		userDAO.login(id);
 	}
+
+	@Override
+	public void listUsersGender(User user) {
+		userDAO.list(user);
+	}
 	
 }
