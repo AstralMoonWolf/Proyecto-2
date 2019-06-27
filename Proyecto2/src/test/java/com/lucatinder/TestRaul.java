@@ -11,7 +11,7 @@ import com.lucatinder.controller.HomeController;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Proyecto2ApplicationTests {
+public class TestRaul {
 
 	@Autowired
 	private HomeController controller;
