@@ -11,7 +11,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 @Repository
-public class UserRepositoryCustom implements IUserRepositoryCustom{
+public class UserRepositoryImpl implements IUserRepositoryCustom{
 
 	
 	
