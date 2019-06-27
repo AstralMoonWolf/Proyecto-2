@@ -22,6 +22,7 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	private IUserRepository userDAO;
 	
+	
 	/**
 	 * Este método añade un bean de usuario a la bbdd
 	 */
@@ -29,6 +30,11 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public void add(User user) {
 		userDAO.save(user);
+	}
+	
+	@Override
+	public void login(int id) {
+		
 	}
 	
 }
