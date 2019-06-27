@@ -18,6 +18,6 @@ public interface IUserRepository extends JpaRepository<User,Integer>,IUserReposi
 
 	public void login(int id);
 
-	public void list(User user);
+	public void list(User genero);
 
 }

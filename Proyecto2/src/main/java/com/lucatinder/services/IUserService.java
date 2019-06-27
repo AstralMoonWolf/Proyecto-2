@@ -20,5 +20,5 @@ public interface IUserService {
 	
 	public void login(int id);
 	
-	public void listUsersGender(User user);
+	public void listUsersGender(User genero);
 }
