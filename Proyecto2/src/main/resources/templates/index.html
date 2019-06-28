@@ -8,8 +8,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/misestilos.css" />
+    
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/misestilos.css" />
 </head>
 
 <body class="is-preload">
@@ -20,14 +21,16 @@
             <img id="logoprincipal" src="images/logo3.png">
         </header>
         <footer>
-
+<form th:action="@{/profile}" th:object="${usuarios.idusuario}" method="post">
             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="Introduce tu ID de usuario" aria-label="" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Introduce tu ID de usuario" aria-label="" aria-describedby="basic-addon1" th:field="*{idusuario}">
 
             </div>
 
-
-            <a href="#first" class="button scrolly">Entrar a lucaTinder</a>
+<button type="submit" class="button scrolly">Entrar a lucaTinder</button>
+           <!--  
+            <a href="#" type="submit" class="button scrolly">Entrar a lucaTinder</a>-->
+            </form>
         </footer>
     </section>
 
@@ -44,28 +47,28 @@
         </header>
         <div class="content dark style1 featured">
             <div class="container">
-
+<form th:action="@{/profile}" th:object="${usuarios}" method="post">
                 <label id="registro1" for="nombre">Nombre:</label>
                 <div class="input-group" id="login">
             
-                <input type="text" class="form-control" placeholder="Introduce tu nombre" aria-label="" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Introduce tu nombre" aria-label="" aria-describedby="basic-addon1" th:field="*{nombre}" >
 
             </div><label id="registro1" for="nombre">Fecha de Nacimiento:</label>
                             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1" th:field="*{nombre}" th:field="*{edad}" >
 
             </div>
                            <label id="registro1" for="nombre">Ciudad de Residencia:</label>
                             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1" th:field="*{poblacion}">
 
             </div>
 
 
-            <a href="#first" id="botonregistro" class="button scrolly">Regístrate YA</a>
+            <button type="submit" id="botonregistro" class="button scrolly">Regístrate YA</button>
                 
                 
-                
+               </form> 
                 
                 
                 
