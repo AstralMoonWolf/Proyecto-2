@@ -4,15 +4,24 @@
     <title>lucaTinder</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/misestilos.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    
+   
+    
+    <link rel="stylesheet" th:href="@{/resources/assets/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/resources/assets/css/bootstrap.css}"  />
+    <link rel="stylesheet" th:href="@{/resources/assets/css/misestilos.css}"  />
+    <script src="/resources/assets/js/jquery.min.js"></script>
+    <script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/resources/assets/js/browser.min.js"></script>
+    <script src="/resources/assets/js/breakpoints.min.js"></script>
+    <script src="/resources/assets/js/util.js"></script>
+    <script src="/resources/assets/js/main.js"></script>
 </head>
 <body class="is-preload">
     <!-- Header -->
     <section id="header" class="dark">
         <header>
-            <img id="logoprincipal" src="images/logo3.png">
+            <img id="logoprincipal" src="/resources//images/logo3.png">
         </header>
         <footer>
             <div class="input-group" id="login">
@@ -93,12 +102,6 @@
             </ul>
         </div>
     </section>
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    
 </body>
 </html>
