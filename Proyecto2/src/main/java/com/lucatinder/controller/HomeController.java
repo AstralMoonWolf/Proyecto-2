@@ -28,17 +28,15 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String handleRequest(ModelMap model) throws Exception {
-		
 		logger.info("-- en Listado");
 		model.addAttribute("userList", userService.list());
-
 		return "index";
 	}
 	
 	@PostMapping("/new")
 	public String newUser(ModelMap model) throws Exception  {
 		logger.info("-- en New");
-		//model.addAttribute("user", new User());
+		model.addAttribute("user", new User());
 		return "UserForm";
 	}
 	

@@ -46,14 +46,14 @@ public class UserServiceImpl implements IUserService {
 	 * Este metodo hay que ver si esta bien ***********DUDA***************
 	 */
 	
-	
-	/*public void login(int id) {
+	@Override
+	public void login(int id) {
 		userDAO.login(id);
-	}*/
+	}
 
-	/*@Override
+	@Override
 	public void listUsersGender(User user) {
 		userDAO.listUsersGender(user);
-	}*/
+	}
 	
 }
