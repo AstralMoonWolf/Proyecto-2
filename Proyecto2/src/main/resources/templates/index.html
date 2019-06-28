@@ -1,40 +1,26 @@
 <!DOCTYPE HTML>
-
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <title>lucaTinder</title>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-    <link rel="stylesheet" href="/resources/css/main.css" />
-    <link rel="stylesheet" href="/resources/css/misestilos.css" />
-    <link rel="stylesheet" href="/resources/css/bootstrap.css" />
-
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/misestilos.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
 </head>
-
 <body class="is-preload">
-
     <!-- Header -->
     <section id="header" class="dark">
         <header>
             <img id="logoprincipal" src="images/logo3.png">
         </header>
         <footer>
-<form th:action="@{/profile}" th:object="${usuarios.idusuario}" method="post">
             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="Introduce tu ID de usuario" aria-label="" aria-describedby="basic-addon1" th:field="*{idusuario}">
-
+                <input type="text" class="form-control" placeholder="Introduce tu ID de usuario" aria-label="" aria-describedby="basic-addon1">
             </div>
-
-<button type="submit" class="button scrolly">Entrar a lucaTinder</button>
-           <!--  
-            <a href="#" type="submit" class="button scrolly">Entrar a lucaTinder</a>-->
-            </form>
+            <a href="#first" class="button scrolly">Entrar a lucaTinder</a>
         </footer>
     </section>
-
     <!-- First -->
     <section id="first" class="main">
         <header>
@@ -48,57 +34,47 @@
         </header>
         <div class="content dark style1 featured">
             <div class="container">
-<form th:action="@{/profile}" th:object="${usuarios}" method="post">
                 <label id="registro1" for="nombre">Nombre:</label>
                 <div class="input-group" id="login">
             
-                <input type="text" class="form-control" placeholder="Introduce tu nombre" aria-label="" aria-describedby="basic-addon1" th:field="*{nombre}" >
-
+                <input type="text" class="form-control" placeholder="Introduce tu nombre" aria-label="" aria-describedby="basic-addon1">
             </div><label id="registro1" for="nombre">Fecha de Nacimiento:</label>
                             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1" th:field="*{nombre}" th:field="*{edad}" >
-
+                <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1">
             </div>
-            
-            <table border="1">
-			<thead>
-				<tr>
-					<th>id</th>
-					<th>nombre</th>
-					<th>poblacion</th>
-					<th>edad</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="user:${userList}">
-					<td><span th:text="${user.id}"></span></td>
-					<td><span th:text="${user.nombre}"></span></td>
-					<td><span th:text="${user.poblacion}"></span></td>
-					<td><span th:text="${user.edad}"></span></td>
-					<td>
-					</td>
-				</tr>
-			</tbody>
-		</table>
                            <label id="registro1" for="nombre">Ciudad de Residencia:</label>
                             <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1" th:field="*{poblacion}">
-
+                <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1">
             </div>
-
-
-            <button type="submit" id="botonregistro" class="button scrolly">Regístrate YA</button>
+            <a href="#first" id="botonregistro" class="button scrolly">Regístrate YA</a>
                 
                 
-               </form> 
+                <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>poblacion</th>
+                    <th>edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user:${userList}">
+                    <td><span th:text="${user.id}"></span></td>
+                    <td><span th:text="${user.nombre}"></span></td>
+                    <td><span th:text="${user.poblacion}"></span></td>
+                    <td><span th:text="${user.edad}"></span></td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
                 
                 
                 
             </div>
         </div>
     </section>
-
-
     <!-- Footer -->
     <section id="footer">
         <ul class="icons">
@@ -117,7 +93,6 @@
             </ul>
         </div>
     </section>
-
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -125,7 +100,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

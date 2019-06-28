@@ -21,8 +21,8 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements IUserRepositoryCustom{
 
-	/*@PersistenceContext
-	EntityManager entityManager;*/
+	@PersistenceContext
+	EntityManager entityManager;
 	
 	
 	/*public List<User> getFirstNames(String nombre) {
