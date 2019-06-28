@@ -1,5 +1,7 @@
 package com.lucatinder.services;
 
+import java.util.List;
+
 import com.lucatinder.model.User;
 
 /**
@@ -12,6 +14,10 @@ import com.lucatinder.model.User;
 
 public interface IUserService {
 
+	/**
+	 * Este método lista los usuarios
+	 */
+	public List<User> list();
 	/**
 	 * 
 	 * Este metodo añade usuarios

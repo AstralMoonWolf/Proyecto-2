@@ -1,5 +1,7 @@
 package com.lucatinder.services;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,14 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	private IUserRepository userDAO;
 	
+	/**
+	 * Este método lista los usuarios
+	 */
+	@Override
+	public List<User> list() {
+
+		return userDAO.findAll();
+	}
 	/**
 	 * Este método añade un bean de usuario a la bbdd
 	 */
