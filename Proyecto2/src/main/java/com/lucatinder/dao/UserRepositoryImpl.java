@@ -21,32 +21,32 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements IUserRepositoryCustom{
 
-	@PersistenceContext
-	EntityManager entityManager;
+	/*@PersistenceContext
+	EntityManager entityManager;*/
 	
 	
-	public List<User> getFirstNames(String nombre) {
+	/*public List<User> getFirstNames(String nombre) {
 		Query query = entityManager.createNativeQuery("SELECT nombre FROM lucatinder.usuarios as u " +
                 "WHERE u.nombre LIKE ?", User.class);
         query.setParameter(1, nombre + "%");
         return query.getResultList();
-	}
+	}*/
 	
-	@Override
+	/*@Override
 	public void login(int id) {
 		
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public void listUsersGender(User user) {
 		
-		if(user.getGenero() == Genero.H) {
+		if(user.getGenero() == "h") {
 			
 		}
 		else {
 			
 		}
 		
-	}
+	}*/
 	
 }

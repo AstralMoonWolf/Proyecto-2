@@ -12,11 +12,11 @@ import com.lucatinder.model.User;
 
 public interface IUserRepositoryCustom {
 	
-	List<User> getFirstNames(String nombre);
+	//List<User> getFirstNames(String nombre);
 	
-	public void login(int id);
+	//public void login(int id);
 
-	public void listUsersGender(User user);
+	//public void listUsersGender(User user);
 	
 	
 
