@@ -22,7 +22,7 @@ import com.lucatinder.services.IUserService;
 public class HomeController {
 
 	@Autowired
-	private IUserService IUserService;
+	private IUserService userService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -42,7 +42,7 @@ public class HomeController {
 	
 	@PostMapping("/Acces")
 	public String newId(ModelMap model)throws Exception{
-		logger.info("-- en New");
+		logger.info("-- en Access");
 		return "profile";
 	}
 }

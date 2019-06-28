@@ -3,6 +3,7 @@ package com.lucatinder.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lucatinder.model.Genero;
 import com.lucatinder.model.User;
 
 import javax.persistence.EntityManager;
@@ -22,17 +23,30 @@ public class UserRepositoryImpl implements IUserRepositoryCustom{
 
 	@PersistenceContext
 	EntityManager entityManager;
-	/*
-	@Override
-	public List<User> getFirstNamesLike(String username) {
-		Query query = entityManager.createNativeQuery("SELECT em.* FROM spring_data_jpa_example.username as em " +
-                "WHERE em.username LIKE ?", User.class);
-        query.setParameter(1, username + "%");
-        return query.getResultList();
-	}
 	
+	
+	/*public List<User> getFirstNames(String nombre) {
+		Query query = entityManager.createNativeQuery("SELECT nombre FROM lucatinder.usuarios as u " +
+                "WHERE u.nombre LIKE ?", User.class);
+        query.setParameter(1, nombre + "%");
+        return query.getResultList();
+	}*/
+	
+	/*@Override
 	public void login(int id) {
 		
-	}
-	*/
+	}*/
+
+	/*@Override
+	public void listUsersGender(User user) {
+		
+		if(user.getGenero() == "h") {
+			
+		}
+		else {
+			
+		}
+		
+	}*/
+	
 }

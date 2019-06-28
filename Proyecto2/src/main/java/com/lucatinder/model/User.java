@@ -1,5 +1,7 @@
 package com.lucatinder.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,20 +9,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USERS")
+@Table(name = "USUARIOS")
 public class User {
 
 	private int id;
 	private String nombre;
-	private Genero genero;
-	private String edad;
+	private String genero;
+	private Date edad;
 	private String poblacion;
-	private int idIntereses;
-	private String descipcion;
+	private int idintereses;
+	private String descripcion;
 	
 	@Id
 	@GeneratedValue
-	@Column(name = "idUsuario")
+	@Column(name = "idusuario")
 	public int getId() {
 		return id;
 	}
@@ -35,16 +37,16 @@ public class User {
 		this.nombre = nombre;
 	}
 	
-	public Genero getGenero() {
+	public String getGenero() {
 		return genero;
 	}
-	public void setGenero(Genero genero) {
+	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public String getEdad() {
+	public Date getEdad() {
 		return edad;
 	}
-	public void setEdad(String edad) {
+	public void setEdad(Date edad) {
 		this.edad = edad;
 	}
 	public String getPoblacion() {
@@ -53,17 +55,18 @@ public class User {
 	public void setPoblacion(String poblacion) {
 		this.poblacion = poblacion;
 	}
+	@Column(name = "idintereses")
 	public int getIdIntereses() {
-		return idIntereses;
+		return idintereses;
 	}
-	public void setIdIntereses(int idIntereses) {
-		this.idIntereses = idIntereses;
+	public void setIdIntereses(int idintereses) {
+		this.idintereses = idintereses;
 	}
-	public String getDescipcion() {
-		return descipcion;
+	public String getDescripcion() {
+		return descripcion;
 	}
-	public void setDescipcion(String descipcion) {
-		this.descipcion = descipcion;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	
 	
