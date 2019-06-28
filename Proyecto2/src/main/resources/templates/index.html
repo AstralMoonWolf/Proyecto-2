@@ -7,9 +7,9 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/misestilos.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/resources/css/main.css" />
+    <link rel="stylesheet" href="/resources/css/misestilos.css" />
+    <link rel="stylesheet" href="/resources/css/bootstrap.css" />
 </head>
 
 <body class="is-preload">
@@ -55,6 +55,27 @@
                 <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1">
 
             </div>
+            
+            <table border="1">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>nombre</th>
+					<th>poblacion</th>
+					<th>edad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="user:${userList}">
+					<td><span th:text="${user.id}"></span></td>
+					<td><span th:text="${user.nombre}"></span></td>
+					<td><span th:text="${user.poblacion}"></span></td>
+					<td><span th:text="${user.edad}"></span></td>
+					<td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
                            <label id="registro1" for="nombre">Ciudad de Residencia:</label>
                             <div class="input-group" id="login">
                 <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1">

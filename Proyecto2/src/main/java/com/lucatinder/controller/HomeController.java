@@ -21,7 +21,7 @@ import com.lucatinder.services.IUserService;
 @Controller
 public class HomeController {
 
-	//@Autowired
+	@Autowired
 	private IUserService userService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
