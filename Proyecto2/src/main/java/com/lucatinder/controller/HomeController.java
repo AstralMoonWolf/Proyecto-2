@@ -29,7 +29,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Listado");
-		model.addAttribute("userList", userService.list());
+		//model.addAttribute("userList", userService.list());
 		return "index";
 	}
 	
