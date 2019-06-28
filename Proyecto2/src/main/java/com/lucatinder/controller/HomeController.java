@@ -28,11 +28,11 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
-	@GetMapping("/profile")
+	@GetMapping({"/","/index"})
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
 		model.addAttribute("userList", userService.list());
-		return "profile";
+		return "index";
 	}
 	
 	
