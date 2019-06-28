@@ -22,7 +22,7 @@ public class UserRepositoryImpl implements IUserRepositoryCustom{
 
 	@PersistenceContext
 	EntityManager entityManager;
-	
+	/*
 	@Override
 	public List<User> getFirstNamesLike(String username) {
 		Query query = entityManager.createNativeQuery("SELECT em.* FROM spring_data_jpa_example.username as em " +
@@ -34,5 +34,5 @@ public class UserRepositoryImpl implements IUserRepositoryCustom{
 	public void login(int id) {
 		
 	}
-	
+	*/
 }

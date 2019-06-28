@@ -12,7 +12,7 @@ import com.lucatinder.model.User;
 
 public interface IUserRepositoryCustom {
 	
-	List<User> getFirstNamesLike(String username);
+	//List<User> getFirstNamesLike(String username);
 	
 	
 

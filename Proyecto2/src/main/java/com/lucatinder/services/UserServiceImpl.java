@@ -48,12 +48,12 @@ public class UserServiceImpl implements IUserService {
 	
 	@Override
 	public void login(int id) {
-		userDAO.login(id);
+		//userDAO.login(id);
 	}
 
 	@Override
 	public void listUsersGender(User genero) {
-		userDAO.listUsersGender(genero);
+		//userDAO.listUsersGender(genero);
 	}
 	
 }
