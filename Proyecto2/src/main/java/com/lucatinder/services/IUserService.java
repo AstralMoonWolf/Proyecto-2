@@ -18,7 +18,7 @@ public interface IUserService {
 	 */
 	public void add(User user);
 	
-	public void login(int id);
+	//public void login(int id);
 	
-	public void listUsersGender(User genero);
+	//public void listUsersGender(User user);
 }

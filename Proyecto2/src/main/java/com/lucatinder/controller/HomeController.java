@@ -21,27 +21,27 @@ import com.lucatinder.services.IUserService;
 @Controller
 public class HomeController {
 
-	@Autowired
-	private IUserService IUserService;
+	//@Autowired
+	//private IUserService IUserService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping("/")
 	public String handleRequest(ModelMap model) throws Exception {
-		logger.info("-- en Listado");
+		//logger.info("-- en Listado");
 		return "index";
 	}
 	
 	@PostMapping("/new")
 	public String newUser(ModelMap model) throws Exception  {
 		logger.info("-- en New");
-		model.addAttribute("user", new User());
+		//model.addAttribute("user", new User());
 		return "UserForm";
 	}
 	
 	@PostMapping("/Acces")
 	public String newId(ModelMap model)throws Exception{
-		logger.info("-- en New");
+		logger.info("-- en Access");
 		return "profile";
 	}
 }
