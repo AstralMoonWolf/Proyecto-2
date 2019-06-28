@@ -24,6 +24,7 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
 	private IUserRepository userDAO;
 	
+	
 	/**
 	 * Este método lista los usuarios
 	 */
@@ -39,6 +40,20 @@ public class UserServiceImpl implements IUserService {
 	@Override
 	public void add(User user) {
 		userDAO.save(user);
+	}
+	
+	/**
+	 * Este metodo hay que ver si esta bien ***********DUDA***************
+	 */
+	
+	@Override
+	public void login(int id) {
+		userDAO.login(id);
+	}
+
+	@Override
+	public void listUsersGender(User genero) {
+		userDAO.listUsersGender(genero);
 	}
 	
 }

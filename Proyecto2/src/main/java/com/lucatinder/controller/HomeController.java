@@ -13,7 +13,7 @@ import com.lucatinder.model.User;
 import com.lucatinder.services.IUserService;
 /**
  * 
- * @author Andrea
+ * @author Andrea,Raul
  * @version 1
  * Esta clase contiene el CRUD del usuario
  */
@@ -22,7 +22,7 @@ import com.lucatinder.services.IUserService;
 public class HomeController {
 
 	@Autowired
-	private IUserService userService;
+	private IUserService IUserService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -34,9 +34,15 @@ public class HomeController {
 	}
 	
 	@PostMapping("/new")
-	public String newUser(ModelMap model) {
+	public String newUser(ModelMap model) throws Exception  {
 		logger.info("-- en New");
 		model.addAttribute("user", new User());
 		return "UserForm";
+	}
+	
+	@PostMapping("/Acces")
+	public String newId(ModelMap model)throws Exception{
+		logger.info("-- en New");
+		return "profile";
 	}
 }

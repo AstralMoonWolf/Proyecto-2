@@ -27,14 +27,14 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
-	@Column(name = "Nombre")
+	
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	@Column(name = "Genero")
+	
 	public Genero getGenero() {
 		return genero;
 	}

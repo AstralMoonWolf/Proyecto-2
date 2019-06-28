@@ -31,4 +31,8 @@ public class UserRepositoryImpl implements IUserRepositoryCustom{
         return query.getResultList();
 	}
 	
+	public void login(int id) {
+		
+	}
+	
 }
