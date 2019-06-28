@@ -35,7 +35,6 @@ public class HomeController {
 		return "profile";
 	}
 	
-	
 	@PostMapping("/new")
 	public String newUser(ModelMap model) throws Exception  {
 		logger.info("-- en New");
@@ -48,4 +47,11 @@ public class HomeController {
 		logger.info("-- en Access");
 		return "profile";
 	}
+	
+	@GetMapping("/listacontactos")
+	public String listaContactos(ModelMap model)throws Exception{
+		logger.info("-- en lista contactos");
+		//userService.list();
+		return "listprofiles";
+	}	
 }
