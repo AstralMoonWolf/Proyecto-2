@@ -40,11 +40,53 @@
     font-weight: bold;
     
 }
+#botonregistro2{
+    margin:auto;
+    margin-top:0%;
+    margin-right: 1%;
+}
 div#login.input-group{
     
     border:1px solid grey;
     
 }
-input.form-control{
-    
+.card{
+    padding: 1%;
+    background-color: white;
+    opacity: 0.9;
+    border:2px solid;
+    border-color:darksalmon;
+    width: 75%;
+    border-radius:20px;
+    margin: auto;
+        
+}
+.card-img-top{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 3%;
+    background-color: antiquewhite;
+    margin-top: 0%;
+}
+
+#columna1{
+    color: black;
+    text-align: left;
+}
+#titulodescripcion{
+    color:black;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+#descripcionusuario{
+    color: black;
+    font-family:sans-serif;
+    font-size: 0.85em;
+}
+#idusuarioperfil{
+    font-size: 1.3em;
+}
+#barranavusuario{
+    margin-top: 5%;
 }
