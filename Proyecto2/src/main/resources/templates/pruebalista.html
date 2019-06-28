@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>lucaTinder</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+   
+    
+    <link rel="stylesheet" th:href="@{/resources/assets/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/resources/assets/css/bootstrap.css}"  />
+    <link rel="stylesheet" th:href="@{/resources/assets/css/misestilos.css}"  />
+    <script src="/resources/assets/js/jquery.min.js"></script>
+    <script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/resources/assets/js/browser.min.js"></script>
+    <script src="/resources/assets/js/breakpoints.min.js"></script>
+    <script src="/resources/assets/js/util.js"></script>
+    <script src="/resources/assets/js/main.js"></script>
+</head>
+<body class="is-preload">
+    <!-- Header -->
+    <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>poblacion</th>
+                    <th>edad</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user:${userList}">
+                    <td><span th:text="${user.id}"></span></td>
+                    <td><span th:text="${user.nombre}"></span></td>
+                    <td><span th:text="${user.poblacion}"></span></td>
+                    <td><span th:text="${user.edad}"></span></td>
+                    <td><span th:text="${user.descripcion}"></span></td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <!-- Footer -->
+    <section id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+        <div class="copyright">
+            <ul class="menu">
+                <li>&copy; lucaTic - Grupo 01. Formación 18</li><br>
+                <li>Desing by: <br>
+                    Luis A. Ibáñez Rubio<br> Andreea Iliescu<br>Raúl Algar Navarro<br>
+                    Pablo Tortosa</li>
+            </ul>
+        </div>
+    </section>
+    
+</body>
+</html>

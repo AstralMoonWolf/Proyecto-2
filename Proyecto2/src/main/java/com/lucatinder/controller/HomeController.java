@@ -32,7 +32,7 @@ public class HomeController {
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
 		model.addAttribute("userList", userService.list());
-		return "index";
+		return "pruebalista";
 	}
 	
 	
