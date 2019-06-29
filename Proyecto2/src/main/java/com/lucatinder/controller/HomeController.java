@@ -28,12 +28,37 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
+	
 	@GetMapping({"/","/index"})
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
 		model.addAttribute("userList", userService.list());
-		return "pruebalista";
+		return "index";
 	}
+	
+	//mapping de prueba, se borrará
+	@GetMapping("/pruebalista")
+	public String pruebalista(ModelMap model)throws Exception{
+		logger.info("-- en listado de prueba");
+		//userService.list();
+		return "pruebalista";
+	}	
+	
+	@GetMapping("/profile")
+	public String profile(ModelMap model)throws Exception{
+		logger.info("-- en lista contactos");
+		//userService.list();
+		return "profile";
+	}
+	
+	@GetMapping("/listacontactos")
+	public String listaContactos(ModelMap model)throws Exception{
+		logger.info("-- en lista contactos");
+		//userService.list();
+		return "listprofiles";
+	}
+	
+	
 	
 	@PostMapping("/new")
 	public String newUser(ModelMap model) throws Exception  {
@@ -48,10 +73,5 @@ public class HomeController {
 		return "profile";
 	}
 	
-	@GetMapping("/listacontactos")
-	public String listaContactos(ModelMap model)throws Exception{
-		logger.info("-- en lista contactos");
-		//userService.list();
-		return "listprofiles";
-	}	
+		
 }
