@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "USUARIOS")
 public class User {
@@ -15,9 +17,10 @@ public class User {
 	private int id;
 	private String nombre;
 	private String genero;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date edad;
 	private String poblacion;
-	private int idintereses;
+	private Integer idintereses;
 	private String descripcion;
 	
 	@Id
@@ -56,10 +59,10 @@ public class User {
 		this.poblacion = poblacion;
 	}
 	@Column(name = "idintereses")
-	public int getIdIntereses() {
+	public Integer getIdIntereses() {
 		return idintereses;
 	}
-	public void setIdIntereses(int idintereses) {
+	public void setIdIntereses(Integer idintereses) {
 		this.idintereses = idintereses;
 	}
 	public String getDescripcion() {
