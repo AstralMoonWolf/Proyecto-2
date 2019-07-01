@@ -92,5 +92,36 @@ public class HomeController {
 		}else
 		return "redirect:/index";
 	}
+	
+	/**
+	 * Método like que recibe los likes del usuario
+	 * @param id1
+	 * @param id2
+	 * @return redirect
+	 */
+	@GetMapping("/like")
+	public String like(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
+		logger.info("----UsuarioController like");
+		userService.like(id1, id2);
+		model.addAttribute("user", userService.get(id1));
+		model.addAttribute("userList", userService.list());
+		return "contactos";
+	}
+	
+	/**
+	 * Método que envía la información del dislike para guardarla en la base de datos
+	 * @param idPerfil
+	 * @param idDislike
+	 * @return contactos
+	 */
+	@GetMapping("/dislike")
+	public String dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
+		logger.info("-------UsuarioController dislike");
+		userService.dislike(id1, id2);
+		model.addAttribute("user", userService.get(id1));
+		model.addAttribute("userList", userService.list());
+		return "contactos";
+	}
+	
 		
 }
