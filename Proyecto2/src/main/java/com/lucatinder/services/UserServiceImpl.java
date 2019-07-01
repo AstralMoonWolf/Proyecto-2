@@ -42,23 +42,19 @@ public class UserServiceImpl implements UserService {
 		userDAO.save(user);
 	}
 	
-	/*@Override
-	public void add(User user) {
-		userDAO.save(user);
-	}*/
 	
 	/**
 	 * Este metodo hay que ver si esta bien ***********DUDA***************
 	 */
 	
-	/*@Override
-	public void logiSn(int id) {
+	@Override
+	public void login(int id) {
 		userDAO.login(id);
-	}*/
+	}
 
-	/*@Override
+	@Override
 	public void listUsersGender(User user) {
 		userDAO.listUsersGender(user);
-	}*/
+	}
 	
 }
