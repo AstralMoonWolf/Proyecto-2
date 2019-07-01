@@ -90,3 +90,28 @@ div#login.input-group{
 #barranavusuario{
     margin-top: 5%;
 }
+
+.list-group-item{
+	color:black;
+	
+}
+.btn-danger{
+	    float: left;
+}
+.btn-success{
+	float:right;
+}
+
+.table{
+	background:white;
+	opacity: 0.9;
+	
+	font-family: Bree serif;
+	border: 2px solid grey;
+	
+}
+
+.table th{
+	font-weight:bold;
+	font-size: 1.4em;
+}

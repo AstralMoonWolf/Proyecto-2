@@ -9,7 +9,7 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 
 
-
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
 <link rel="stylesheet" th:href="@{/resources/assets/css/main.css}" />
 <link rel="stylesheet" th:href="@{/resources/assets/css/bootstrap.css}" />
 <link rel="stylesheet" th:href="@{/resources/assets/css/misestilos.css}" />
@@ -34,166 +34,63 @@
 		<div class="content dark style1 featured">
 			<div class="container">
 
-				<ul class="list-group">
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
 
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Nombre</th>
+							<th>Edad</th>
+							<th>Población</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="user:${userList}">
+							<td><a
+								th:href="@{/dislike(id1=${usuariologin.id},id2=${user.id})}">
+									<button type="button" class="btn btn-danger">DisLike</button>
+							</a></td>
+
+							<td><span th:text="${user.nombre}"></span></td>
+							<td><span th:text="${user.edad}"></span></td>
+							<td><span th:text="${user.poblacion}"></span></td>
+							<td><a
+								th:href="@{/like(id1=${usuariologin.id},id2=${user.id})}"><button
+										type="button" class="btn btn-success">Like</button></a></td>
+						</tr>
+
+					</tbody>
+				</table>
+
+
+
+
+				<!--   <tr>
+						<th>Nombre</th>
+						<th>Población</th>
+						<th>Fecha de Nacimiento</th>
 						
-						<button type="button" class="btn btn-success">Success</button></li>
+
+					</tr>
+					<tr th:each="user:${userList}">
+
+						<li class="list-group-item"><a
+							th:href="@{/dislike(id1=${usuariologin.id},id2=${user.id})}">
+								<button type="button" class="btn btn-danger">DisLike</button>
+						</a>
+
+
+							<td><span th:text="${user.nombre}"></span></td>
+							<td><span th:text="${user.poblacion}"></span></td>
+							<td><span th:text="${user.edad}"></span></td>
+							 <a
+							th:href="@{/like(id1=${usuariologin.id},id2=${user.id})}"><button
+									type="button" class="btn btn-success">Like</button></a></li>
+									
+					</tr>
 					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						<button type="button" class="btn btn-success">Success</button></li>
-				
-				<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-				   <button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button"class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						
-						<button type="button" class="btn btn-success">Success</button></li>
-					
-					<li class="list-group-item"><button type="button" class="btn btn-danger">Danger</button>
-
-						<div class="card">
-							<img class="card-img-top" src="/images/pathToYourImage.png"
-								alt="Card image cap">
-							<div class="card-body">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">Some quick example text to build on the
-									card title and make up the bulk of the card's content.</p>
-								<a href="#!" class="btn btn-primary">Go somewhere</a>
-							</div>
-						</div>
-						<button type="button" class="btn btn-success">Success</button></li>
-				</ul>
+				-->
 
 
 			</div>

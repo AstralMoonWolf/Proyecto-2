@@ -39,11 +39,11 @@
 						<div class="col-sm-8" id="columna1">
 
 							<ul id="listadatosusuario">
-								<li id="idusuarioperfil">Id Usuario:</li>
-								<li>Nombre:</li>
-								<li>Fecha de nacimiento:</li>
-								<li>Género:</li>
-								<li>Población:</li>
+								<li id="idusuarioperfil">Id Usuario: <span th:text="${user.id}" /></li>
+								<li>Nombre: <span th:text="${user.nombre}" /></li>
+								<li>Fecha de nacimiento: <span th:text="${user.edad}" /></li>
+								<li>Género: <span th:text="${user.genero}" /></li>
+								<li>Población: <span th:text="${user.poblacion}" /></li>
 							</ul>
 							<p>
 								<span id="titulodescripcion">Descripción</span>
@@ -71,7 +71,7 @@
 			</div>
 
 			<ul class="nav nav-pills nav-justified" id="barranavusuario">
-				<li class="nav-item"><a href="#" class="button scrolly"
+				<li class="nav-item"><a th:href="@{/pruebalista2(id=${user.id})}" class="button scrolly"
 					id="botonregistro2">Buscar Gente</a></li>
 				<li class="nav-item"><a href="#" class="button scrolly"
 					id="botonregistro2">Mis Ligues</a></li>

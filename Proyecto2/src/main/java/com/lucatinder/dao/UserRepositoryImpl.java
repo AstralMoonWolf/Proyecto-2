@@ -45,7 +45,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom{
 	public void dislike(int id1, int id2) {
 		// TODO Auto-generated method stub
 		logger.info("--- En método dislike de la clase PerfilRpositoryImpl");
-		entityManager.createNativeQuery("INSERT INTO lucatinder.descartes (idcontacto, fk_idusuario, fk_idusuario2) VALUES (?,?,?)")
+		entityManager.createNativeQuery("INSERT INTO lucatinder.descartes (iddescarte, fk_idusuario, fk_idusuario2) VALUES (?,?,?)")
 	      .setParameter(1, null)
 	      .setParameter(2, id1)
 	      .setParameter(3, id2)
