@@ -3,84 +3,106 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>lucaTinder</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    
-   
-    
-    <link rel="stylesheet" th:href="@{/resources/assets/css/main.css}" />
-    <link rel="stylesheet" th:href="@{/resources/assets/css/bootstrap.css}"  />
-    <link rel="stylesheet" th:href="@{/resources/assets/css/misestilos.css}"  />
-    <script src="/resources/assets/js/jquery.min.js"></script>
-    <script src="/resources/assets/js/jquery.scrolly.min.js"></script>
-    <script src="/resources/assets/js/browser.min.js"></script>
-    <script src="/resources/assets/js/breakpoints.min.js"></script>
-    <script src="/resources/assets/js/util.js"></script>
-    <script src="/resources/assets/js/main.js"></script>
+<title>lucaTinder</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+
+<link rel="stylesheet" th:href="@{/resources/assets/css/main.css}" />
+<link rel="stylesheet" th:href="@{/resources/assets/css/bootstrap.css}" />
+<link rel="stylesheet" th:href="@{/resources/assets/css/misestilos.css}" />
+<script src="/resources/assets/js/jquery.min.js"></script>
+<script src="/resources/assets/js/jquery.scrolly.min.js"></script>
+<script src="/resources/assets/js/browser.min.js"></script>
+<script src="/resources/assets/js/breakpoints.min.js"></script>
+<script src="/resources/assets/js/util.js"></script>
+<script src="/resources/assets/js/main.js"></script>
 </head>
 <body class="is-preload">
-    <!-- Header -->
-    <section id="header" class="dark">
-        <header>
-            <img id="logoprincipal" src="/resources//images/logo3.png">
-        </header>
-        <footer>
-            <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="Introduce tu ID de usuario" aria-label="" aria-describedby="basic-addon1">
-            </div>
-            <a href="#first" class="button scrolly">Entrar a lucaTinder</a>
-        </footer>
-    </section>
-    <!-- First -->
-    <section id="first" class="main">
-        <header>
-            <div class="container">
-                <h2>lucaTinder: la web de citas por excelencia</h2>
-                <p>Desde su creación, lucaTinder se ha caracterizado por ser el mejor sitio de citas online.<br>
-                    Miles de personas han confiado en lucaTinder para encontrar a su media naranja.<br>
-                    Sea cual sea tu género y tus preferencias, aquí encontrarás lo que buscas.
-                </p>
-            </div>
-        </header>
-        <div class="content dark style1 featured">
-            <div class="container">
-                <label id="registro1" for="nombre">Nombre:</label>
-                <div class="input-group" id="login">
-            
-                <input type="text" class="form-control" placeholder="Introduce tu nombre" aria-label="" aria-describedby="basic-addon1">
-            </div><label id="registro1" for="nombre">Fecha de Nacimiento:</label>
-                            <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label="" aria-describedby="basic-addon1">
-            </div>
-                           <label id="registro1" for="nombre">Ciudad de Residencia:</label>
-                            <div class="input-group" id="login">
-                <input type="text" class="form-control" placeholder="¿Dónde vives?" aria-label="" aria-describedby="basic-addon1">
-            </div>
-            <a href="/new" id="botonregistro" class="button scrolly">Regístrate YA</a>
-                
+	<!-- Header -->
+	<section id="header" class="dark">
+		<header>
+			<img id="logoprincipal" src="/resources//images/logo3.png">
+		</header>
+		<footer>
+			<div class="input-group" id="login">
+				<input type="text" class="form-control"
+					placeholder="Introduce tu ID de usuario" aria-label=""
+					aria-describedby="basic-addon1">
+			</div>
+			<a href="#first" class="button scrolly">Entrar a lucaTinder</a>
+		</footer>
+	</section>
+	<!-- First -->
+	<section id="first" class="main">
+		<header>
+			<div class="container">
+				<h2>lucaTinder: la web de citas por excelencia</h2>
+				<p>
+					Desde su creación, lucaTinder se ha caracterizado por ser el mejor
+					sitio de citas online.<br> Miles de personas han confiado en
+					lucaTinder para encontrar a su media naranja.<br> Sea cual sea
+					tu género y tus preferencias, aquí encontrarás lo que buscas.
+				</p>
+			</div>
+		</header>
+		<div class="content dark style1 featured">
+			<div class="container">
+				<form method="post" th:object="${usuario}" th:action="@{/save}">
+					<label id="registro1" for="nombre">Nombre:</label>
+					<div class="input-group" id="login">
 
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <section id="footer">
-        <ul class="icons">
-            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-        <div class="copyright">
-            <ul class="menu">
-                <li>&copy; lucaTic - Grupo 01. Formación 18</li><br>
-                <li>Desing by: <br>
-                    Luis A. Ibáñez Rubio<br> Andreea Iliescu<br>Raúl Algar Navarro<br>
-                    Pablo Tortosa</li>
-            </ul>
-        </div>
-    </section>
-    
+						<input type="text" class="form-control"
+							placeholder="Introduce tu nombre" aria-label=""
+							aria-describedby="basic-addon1" th:field="*{nombre}">
+					</div>
+					<label id="registro1" for="nombre">Fecha de Nacimiento:</label>
+					<div class="input-group" id="login">
+					<input  class="form-control"   type="date" value="15/10/2016" id="edad"
+             th:value="${#dates.format(edad,'dd/MM/yyyy')}" th:name="edad" />
+					
+						<!--  <input type="date" class="form-control"
+							placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label=""
+							aria-describedby="basic-addon1" th:field="*{edad}"> -->
+					</div>
+					<label id="registro1" for="nombre">Ciudad de Residencia:</label>
+					<div class="input-group" id="login">
+						<input type="text" class="form-control"
+							placeholder="¿Dónde vives?" aria-label=""
+							aria-describedby="basic-addon1" th:field="*{poblacion}">
+					</div>
+					<input type="submit" id="botonregistro" class="button scrolly" value="Dar de alta" />
+
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon brands fa-twitter"><span
+					class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span
+					class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-instagram"><span
+					class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands fa-dribbble"><span
+					class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon brands fa-github"><span
+					class="label">GitHub</span></a></li>
+		</ul>
+		<div class="copyright">
+			<ul class="menu">
+				<li>&copy; lucaTic - Grupo 01. Formación 18</li>
+				<br>
+				<li>Desing by: <br> Luis A. Ibáñez Rubio<br> Andreea
+					Iliescu<br>Raúl Algar Navarro<br> Pablo Tortosa
+				</li>
+			</ul>
+		</div>
+	</section>
+
 </body>
 </html>

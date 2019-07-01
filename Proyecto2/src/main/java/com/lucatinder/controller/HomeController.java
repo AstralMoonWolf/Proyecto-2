@@ -32,7 +32,7 @@ public class HomeController {
 	@GetMapping({"/","/index"})
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
-		model.addAttribute("userList", userService.list());
+		model.addAttribute("usuario", new User());
 		return "index";
 	}
 	
@@ -43,6 +43,13 @@ public class HomeController {
 		model.addAttribute("userList", userService.list());
 		//userService.list();
 		return "pruebalista";
+	}
+	@GetMapping("/pruebalista2")
+	public String pruebalista2(ModelMap model)throws Exception{
+		logger.info("-- en listado de prueba");
+		model.addAttribute("userList", userService.list());
+		//userService.list();
+		return "listprofilesnuevo";
 	}	
 	
 	@GetMapping("/profile")
