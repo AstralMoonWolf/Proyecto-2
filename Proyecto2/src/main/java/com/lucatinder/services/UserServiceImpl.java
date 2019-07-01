@@ -1,12 +1,16 @@
 package com.lucatinder.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.lucatinder.controller.HomeController;
 import com.lucatinder.dao.UserRepository;
 import com.lucatinder.model.User;
 /**
@@ -20,10 +24,34 @@ import com.lucatinder.model.User;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	@Autowired
 	private UserRepository userDAO;
 	
+	public void like(int id1, int id2) {
+		userDAO.like(id1, id2);
+	}
+	
+	public void dislike(int id1, int id2) {
+		userDAO.dislike(id1, id2);
+	}
+	
+	@Override
+	public User get(int id) {
+		// TODO Auto-generated method stub
+		logger.info("---Obtiene el perfil");
+		Optional<User> perfilOptional = userDAO.findById(id);
+		if (perfilOptional.isPresent()){
+			User u = perfilOptional.get();
+			System.out.println(u);
+			return u;
+		}
+		else{
+		   return null;
+		}
+	}
 	
 	/**
 	 * Este método lista los usuarios

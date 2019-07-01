@@ -68,6 +68,60 @@ public class User {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((descripcion == null) ? 0 : descripcion.hashCode());
+		result = prime * result + ((edad == null) ? 0 : edad.hashCode());
+		result = prime * result + ((genero == null) ? 0 : genero.hashCode());
+		result = prime * result + id;
+		result = prime * result + idintereses;
+		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
+		result = prime * result + ((poblacion == null) ? 0 : poblacion.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (descripcion == null) {
+			if (other.descripcion != null)
+				return false;
+		} else if (!descripcion.equals(other.descripcion))
+			return false;
+		if (edad == null) {
+			if (other.edad != null)
+				return false;
+		} else if (!edad.equals(other.edad))
+			return false;
+		if (genero == null) {
+			if (other.genero != null)
+				return false;
+		} else if (!genero.equals(other.genero))
+			return false;
+		if (id != other.id)
+			return false;
+		if (idintereses != other.idintereses)
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (poblacion == null) {
+			if (other.poblacion != null)
+				return false;
+		} else if (!poblacion.equals(other.poblacion))
+			return false;
+		return true;
+	}
+	
 	
 	
 	

@@ -11,6 +11,10 @@ import com.lucatinder.model.User;
  */
 
 public interface UserRepositoryCustom {
+
+	void like(int id1, int id2);
+	
+	void dislike(int id1, int id2);
 	
 	//List<User> getFirstNames(String nombre);
 	
