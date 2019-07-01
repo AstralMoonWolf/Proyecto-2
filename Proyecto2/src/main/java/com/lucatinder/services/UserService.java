@@ -20,6 +20,13 @@ public interface UserService {
 	public void add(User user);
 	
 	public void listUsersGender(User user);
+	public void like(int id1, int id2);
+	
+	public void dislike(int id1, int id2);
+
+	User get(int id);
+	
+	/*public void login(int id);
 	
 	User deleteById(int id);
 
