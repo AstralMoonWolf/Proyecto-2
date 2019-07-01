@@ -10,7 +10,7 @@ import com.lucatinder.model.User;
  * Esta clase lista los nombres de los usuarios
  */
 
-public interface IUserRepositoryCustom {
+public interface UserRepositoryCustom {
 	
 	//List<User> getFirstNames(String nombre);
 	

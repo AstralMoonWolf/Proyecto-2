@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lucatinder.dao.IUserRepository;
+import com.lucatinder.dao.UserRepository;
 import com.lucatinder.model.User;
 /**
  * 
@@ -19,10 +19,10 @@ import com.lucatinder.model.User;
 
 @Service
 @Transactional
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private IUserRepository userDAO;
+	private UserRepository userDAO;
 	
 	
 	/**
@@ -36,6 +36,11 @@ public class UserServiceImpl implements IUserService {
 	/**
 	 * Este método añade un bean de usuario a la bbdd
 	 */
+	
+	@Override
+	public void add(User user) {
+		userDAO.save(user);
+	}
 	
 	/*@Override
 	public void add(User user) {

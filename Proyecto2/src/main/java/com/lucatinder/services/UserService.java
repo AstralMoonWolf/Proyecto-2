@@ -12,14 +12,14 @@ import com.lucatinder.model.User;
  *
  */
 
-public interface IUserService {
+public interface UserService {
 
 	
 	public List<User> list();
 	
-	/*public void add(User user);
+	public void add(User user);
 	
-	public void login(int id);
+	/*public void login(int id);
 	
 	public void listUsersGender(User user);*/
 }
