@@ -26,8 +26,6 @@ public interface UserService {
 
 	User get(int id);
 	
-	/*public void login(int id);
-	
 	User deleteById(int id);
 
 	User findById(int id);
