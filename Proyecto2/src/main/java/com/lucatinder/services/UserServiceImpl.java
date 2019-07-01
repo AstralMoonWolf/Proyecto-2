@@ -42,19 +42,28 @@ public class UserServiceImpl implements UserService {
 		userDAO.save(user);
 	}
 	
-	
-	/**
-	 * Este metodo hay que ver si esta bien ***********DUDA***************
-	 */
+	@Override
+	public User deleteById(int id) {
+		User user = findById(id);
+		if (user != null) {
+			userDAO.delete(user);
+		}
+		return user;
+	}
 	
 	@Override
-	public void login(int id) {
-		userDAO.login(id);
+	public User findById(int id) {
+		return userDAO.findById(id).orElse(null);
 	}
 
 	@Override
+	public User update(User user) {
+		return userDAO.save(user);
+	}
+	@Override
 	public void listUsersGender(User user) {
-		userDAO.listUsersGender(user);
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

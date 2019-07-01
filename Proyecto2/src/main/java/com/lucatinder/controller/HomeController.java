@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lucatinder.model.User;
@@ -33,6 +34,7 @@ public class HomeController {
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
 		model.addAttribute("userList", userService.list());
+		model.addAttribute("user", new User());
 		return "index";
 	}
 	
@@ -73,11 +75,13 @@ public class HomeController {
 		return "UserForm";
 	}
 	
-	@PostMapping("/Acces")
-	public String newId(ModelMap model)throws Exception{
+	@PostMapping("/acces")
+	public String newId(@RequestParam int id, ModelMap model)throws Exception{
 		logger.info("-- en Access");
-		return "profile";
+		if(userService.findById(id)!=null) {
+			return "profile";
+		}else
+		return "redirect:/index";
 	}
-	
 		
 }

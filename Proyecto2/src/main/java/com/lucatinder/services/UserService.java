@@ -19,7 +19,11 @@ public interface UserService {
 	
 	public void add(User user);
 	
-	public void login(int id);
-	
 	public void listUsersGender(User user);
+	
+	User deleteById(int id);
+
+	User findById(int id);
+
+	User update(User user);
 }

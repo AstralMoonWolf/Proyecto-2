@@ -14,7 +14,7 @@ public interface UserRepositoryCustom {
 	
 	List<User> getFirstNames(String nombre);
 	
-	public void login(int id);
+	
 
 	public void listUsersGender(User user);
 	

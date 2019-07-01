@@ -32,10 +32,6 @@ public class UserRepositoryImpl implements UserRepositoryCustom{
         return query.getResultList();
 	}
 	
-@Override
-	public void login(int id) {
-		
-	}
 
 	@Override
 	public void listUsersGender(User user) {
