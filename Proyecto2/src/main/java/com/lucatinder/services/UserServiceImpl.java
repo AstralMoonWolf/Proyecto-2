@@ -60,6 +60,7 @@ public class UserServiceImpl implements UserService {
 	public List<User> list() {
 
 		return userDAO.findAll();
+		
 	}
 	/**
 	 * Este método añade un bean de usuario a la bbdd
