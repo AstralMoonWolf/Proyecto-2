@@ -28,23 +28,23 @@
 		</header>
 		<footer>
 
-			<form class="formulariologin" th:action="@{/acces}" method="post" name="acces"
-				th:object="${user}">
+			<form class="formulariologin" th:action="@{/acces}" method="post"
+				name="acces" th:object="${user}">
 				<p id="tituloformu">Introduce tu ID de Usuario</p>
 				<!-- PONER EL NOMBRE FINAL DEL MÉTODO -->
 				<div class="form-group" id="formlogin">
 					<input type="text" name="text" th:field="*{id}"
-						class="form-control" placeholder="ID"
-						style="margin: auto">
+						class="form-control" placeholder="ID" style="margin: auto">
 				</div>
 
 				<div class="col-md-12 text-center" id="formlogin">
 					<button type="submit"
-						class=" btn btn-block mybtn btn-primary tx-tfm">Entrar a lucaTinder</button>
+						class=" btn btn-block mybtn btn-primary tx-tfm">Entrar a
+						lucaTinder</button>
 				</div>
 			</form>
 
-			
+
 		</footer>
 	</section>
 	<!-- First -->
@@ -73,12 +73,11 @@
 					</div>
 					<label id="registro1" for="nombre">Fecha de Nacimiento:</label>
 					<div class="input-group" id="login">
-					<input  class="form-control"   type="date" value="15/10/2016" id="edad"
-             th:value="${#dates.format(edad,'dd/MM/yyyy')}" th:name="edad" />
-					
-						<!--  <input type="date" class="form-control"
-							placeholder="AAAA-MM-DD (Ejemplo: 1996-05-21)" aria-label=""
-							aria-describedby="basic-addon1" th:field="*{edad}"> -->
+						<input class="form-control" type="date" value="15/10/2016"
+							id="edad" th:value="${#dates.format(edad,'dd/MM/yyyy')}"
+							th:name="edad" />
+
+
 					</div>
 					<label id="registro1" for="nombre">Ciudad de Residencia:</label>
 					<div class="input-group" id="login">
@@ -86,7 +85,8 @@
 							placeholder="¿Dónde vives?" aria-label=""
 							aria-describedby="basic-addon1" th:field="*{poblacion}">
 					</div>
-					<input type="submit" id="botonregistro" class="button scrolly" value="Dar de alta"/>
+					<input type="submit" id="botonregistro" class="button scrolly"
+						value="Dar de alta" />
 
 				</form>
 
