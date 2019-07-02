@@ -61,12 +61,7 @@ public class HomeController {
 		return "profile";
 	}
 
-	@GetMapping("/listacontactos")
-	public String listaContactos(ModelMap model) throws Exception {
-		logger.info("-- en lista contactos");
-		// userService.list();
-		return "listprofiles";
-	}
+	
 
 	@PostMapping("/save")
 	public String saveUser(@ModelAttribute("user") User user, ModelMap model) throws Exception {
@@ -82,14 +77,7 @@ public class HomeController {
 
 	}
 
-	@PostMapping("/new")
-	public String newUser(ModelMap model) throws Exception {
-		logger.info("-- en New");
-		model.addAttribute("user", new User());
-		return "userForm";
-
-	}
-
+	
 	@PostMapping("/acces")
 	public String newId(@ModelAttribute("user") User user, ModelMap model) throws Exception {
 		logger.info("-- en Access");
@@ -100,13 +88,7 @@ public class HomeController {
 			return "redirect:/index";
 	}
 
-	/**
-	 * Método like que recibe los likes del usuario
-	 * 
-	 * @param id1
-	 * @param id2
-	 * @return redirect
-	 */
+	
 	@GetMapping("/like")
 	public String like(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("----UsuarioController like");
@@ -116,14 +98,7 @@ public class HomeController {
 		return "listprofilesnuevo";
 	}
 
-	/**
-	 * Método que envía la información del dislike para guardarla en la base de
-	 * datos
-	 * 
-	 * @param idPerfil
-	 * @param idDislike
-	 * @return contactos
-	 */
+	
 	@GetMapping("/dislike")
 	public String dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("-------UsuarioController dislike");
