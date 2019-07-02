@@ -73,28 +73,30 @@ public class HomeController {
 	}
 	
 	@PostMapping("/save")
-	public ModelAndView saveUser(@ModelAttribute User user) {
+	public String saveUser(@ModelAttribute ("user")User user, ModelMap model )throws Exception {
 		logger.info("-- en SAVE");
 		userService.add(user);
-		return new ModelAndView("redirect:/");
+		//model.addAttribute("user",userService.findById(user.getId()));
+		//model.addAttribute(user);
+		//return new ModelAndView("redirect:/");
+		//return new ModelAndView ("profile");
+		if(userService.findById(user.getId())!=null) {
+			model.addAttribute("user",userService.findById(user.getId()));
+			return "profile";
+			
+		}else {
+			return "redirect:/index";
+		}
+	
 	}
 	
 	@PostMapping("/new")
 	public String newUser(ModelMap model) throws Exception  {
 		logger.info("-- en New");
 		model.addAttribute("user", new User());
-		return "UserForm";
+		return "userForm";
+		
 	}
-	
-	/*@PostMapping("/acces")
-	public String newId(@RequestParam int id, ModelMap model)throws Exception{
-		logger.info("-- en Access");
-		if(userService.findById(id)!=null) {
-			model.addAttribute("user",userService.findById(id));
-			return "profile";
-		}else
-		return "redirect:/index";
-	}*/
 	
 	@PostMapping("/acces")
 	public String newId(@ModelAttribute("user") User user, ModelMap model)throws Exception{
@@ -116,7 +118,7 @@ public class HomeController {
 	public String like(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("----UsuarioController like");
 		userService.like(id1, id2);
-		model.addAttribute("usuariologin", userService.get(id1));
+		model.addAttribute("usuariologin", userService.findById(id1));
 		model.addAttribute("userList", userService.list());
 		return "listprofilesnuevo";
 	}
@@ -131,7 +133,7 @@ public class HomeController {
 	public String dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("-------UsuarioController dislike");
 		userService.dislike(id1, id2);
-		model.addAttribute("usuariologin", userService.get(id1));
+		model.addAttribute("usuariologin", userService.findById(id1));
 		model.addAttribute("userList", userService.list());
 		return "listprofilesnuevo";
 	}
