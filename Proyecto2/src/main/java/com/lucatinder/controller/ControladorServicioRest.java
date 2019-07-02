@@ -34,6 +34,12 @@ public class ControladorServicioRest {
 		return this.userService.findById(id);
 	}
 	
+	@GetMapping("/listausuarios")
+	public List<User> listausuarios() {
+		return userService.list();
+	}
+	
+	
 	@GetMapping("/dislike")
 	public void dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2) {
 		//logger.info("-------RestController dislike");
