@@ -1,5 +1,6 @@
 package com.lucatinder.controller;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -7,13 +8,16 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.lucatinder.model.User;
 import com.lucatinder.services.UserService;
@@ -47,6 +51,12 @@ public class ControladorServicioRest {
 	@GetMapping("/listausuarios")
 	List<User> listausuarios(){
 		return this.userService.list();
+	}
+	
+	//Metodo que devuelve el usuario creado 
+	@PostMapping("/new")
+	public User update(@RequestBody User user) {
+		return userService.update(user);
 	}
 	
 }
