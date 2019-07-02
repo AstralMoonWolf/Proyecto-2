@@ -97,8 +97,6 @@ public class HomeController {
 		model.addAttribute("userList", userService.list());
 		return "listprofilesnuevo";
 	}
-
-	
 	
 	
 	@GetMapping("/dislike")
