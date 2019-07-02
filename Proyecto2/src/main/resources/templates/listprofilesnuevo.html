@@ -19,6 +19,8 @@
 <script src="/resources/assets/js/breakpoints.min.js"></script>
 <script src="/resources/assets/js/util.js"></script>
 <script src="/resources/assets/js/main.js"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 </head>
 <body class="is-preload">
 	<!-- Header -->
@@ -49,15 +51,21 @@
 						<tr th:each="user:${userList}">
 							<td><a
 								th:href="@{/dislike(id1=${usuariologin.id},id2=${user.id})}">
-									<button type="button" class="btn btn-danger">DisLike</button>
-							</a></td>
+									<!-- <button type="button" class="btn btn-danger">DisLike</button> -->
+									
+									<font color="red"><i class="fas fa-thumbs-down"></i></font>
+									</i></a></td>
 
 							<td><span th:text="${user.nombre}"></span></td>
 							<td><span th:text="${user.edad}"></span></td>
 							<td><span th:text="${user.poblacion}"></span></td>
 							<td><a
-								th:href="@{/like(id1=${usuariologin.id},id2=${user.id})}"><button
-										type="button" class="btn btn-success">Like</button></a></td>
+								th:href="@{/like(id1=${usuariologin.id},id2=${user.id})}">
+								
+								<font color="green"><i class="fas fa-thumbs-up"></i></font>
+ 
+								<!-- <button type="button" class="btn btn-success">Like</button> -->  
+								</a></td>
 						</tr>
 
 					</tbody>
