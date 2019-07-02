@@ -115,3 +115,15 @@ div#login.input-group{
 	font-weight:bold;
 	font-size: 1.4em;
 }
+
+.formulariologin{
+	width:15%;
+	margin:auto;
+}
+
+#tituloformu{
+	font-family: Bree serif;
+	font-size:1.3em;
+	font-weight:bold;
+}
+

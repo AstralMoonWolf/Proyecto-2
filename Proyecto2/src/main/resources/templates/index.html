@@ -28,16 +28,17 @@
 		</header>
 		<footer>
 
-			<form th:action="@{/acces}" method="post" name="acces"
+			<form class="formulariologin" th:action="@{/acces}" method="post" name="acces"
 				th:object="${user}">
+				<p id="tituloformu">Introduce tu ID de Usuario</p>
 				<!-- PONER EL NOMBRE FINAL DEL MÉTODO -->
-				<div class="form-group">
+				<div class="form-group" id="formlogin">
 					<input type="text" name="text" th:field="*{id}"
-						class="form-control" placeholder="Ingrese ID de usuario"
+						class="form-control" placeholder="ID"
 						style="margin: auto">
 				</div>
 
-				<div class="col-md-12 text-center ">
+				<div class="col-md-12 text-center" id="formlogin">
 					<button type="submit"
 						class=" btn btn-block mybtn btn-primary tx-tfm">Entrar a lucaTinder</button>
 				</div>
