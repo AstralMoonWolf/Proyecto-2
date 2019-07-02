@@ -22,14 +22,16 @@ public class ControladorServicioRest {
 		return this.userService.findById(id);
 	}
 	
-	/*@GetMapping("/dislike")
-	public String dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
-		logger.info("-------UsuarioController dislike");
+	@GetMapping("/dislike")
+	public void dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2) {
+		//logger.info("-------RestController dislike");
 		userService.dislike(id1, id2);
-		model.addAttribute("usuariologin", userService.findById(id1));
-		model.addAttribute("userList", userService.list());
-		return "listprofilesnuevo";
-	}*/
+	}
 	
-
+	@GetMapping("/like")
+	public void like(@RequestParam("id1") int id1, @RequestParam("id2") int id2) {
+		//logger.info("-------RestController dislike");
+		userService.like(id1, id2);
+	}
+	
 }
