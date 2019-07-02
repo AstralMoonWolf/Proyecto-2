@@ -1,6 +1,5 @@
 package com.lucatinder.controller;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +13,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.lucatinder.model.User;
 import com.lucatinder.services.UserService;
+
 /**
  * 
  * @author Andrea,Raul
- * @version 1
- * Esta clase contiene el CRUD del usuario
+ * @version 1 Esta clase contiene el CRUD del usuario
  */
 
 @Controller
@@ -26,90 +25,84 @@ public class HomeController {
 
 	@Autowired
 	private UserService userService;
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-	
-	@GetMapping({"/","/index"})
+
+	@GetMapping({ "/", "/index" })
 	public String handleRequest(ModelMap model) throws Exception {
 		logger.info("-- en Index");
-
-		
 		model.addAttribute("user", new User());
-
 		return "index";
 	}
-	
-	//mapping de prueba, se borrará
+
+	// mapping de prueba, se borrará
 	@GetMapping("/pruebalista")
-	public String pruebalista(ModelMap model)throws Exception{
+	public String pruebalista(ModelMap model) throws Exception {
 		logger.info("-- en listado de prueba");
 		model.addAttribute("userList", userService.list());
-		//userService.list();
+		// userService.list();
 		return "pruebalista";
 	}
+
 	@GetMapping("/pruebalista2")
-	public String pruebalista2(@RequestParam("id") int id, ModelMap model)throws Exception{
+	public String pruebalista2(@RequestParam("id") int id, ModelMap model) throws Exception {
 		logger.info("-- en listado de prueba");
-		
+
 		model.addAttribute("userList", userService.list());
 		model.addAttribute("usuariologin", userService.findById(id));
-		//userService.list();
+		// userService.list();
 		return "listprofilesnuevo";
-	}	
-	
+	}
+
 	@GetMapping("/profile")
-	public String profile(ModelMap model)throws Exception{
+	public String profile(ModelMap model) throws Exception {
 		logger.info("-- en profile");
-		//userService.list();
+		// userService.list();
 		return "profile";
 	}
-	
+
 	@GetMapping("/listacontactos")
-	public String listaContactos(ModelMap model)throws Exception{
+	public String listaContactos(ModelMap model) throws Exception {
 		logger.info("-- en lista contactos");
-		//userService.list();
+		// userService.list();
 		return "listprofiles";
 	}
-	
+
 	@PostMapping("/save")
-	public String saveUser(@ModelAttribute ("user")User user, ModelMap model )throws Exception {
+	public String saveUser(@ModelAttribute("user") User user, ModelMap model) throws Exception {
 		logger.info("-- en SAVE");
 		userService.add(user);
-		//model.addAttribute("user",userService.findById(user.getId()));
-		//model.addAttribute(user);
-		//return new ModelAndView("redirect:/");
-		//return new ModelAndView ("profile");
-		if(userService.findById(user.getId())!=null) {
-			model.addAttribute("user",userService.findById(user.getId()));
+		if (userService.findById(user.getId()) != null) {
+			model.addAttribute("user", userService.findById(user.getId()));
 			return "profile";
-			
-		}else {
+
+		} else {
 			return "redirect:/index";
 		}
-	
+
 	}
-	
+
 	@PostMapping("/new")
-	public String newUser(ModelMap model) throws Exception  {
+	public String newUser(ModelMap model) throws Exception {
 		logger.info("-- en New");
 		model.addAttribute("user", new User());
 		return "userForm";
-		
+
 	}
-	
+
 	@PostMapping("/acces")
-	public String newId(@ModelAttribute("user") User user, ModelMap model)throws Exception{
+	public String newId(@ModelAttribute("user") User user, ModelMap model) throws Exception {
 		logger.info("-- en Access");
-		if(userService.findById(user.getId())!=null) {
-			model.addAttribute("user",userService.findById(user.getId()));
+		if (userService.findById(user.getId()) != null) {
+			model.addAttribute("user", userService.findById(user.getId()));
 			return "profile";
-		}else
-		return "redirect:/index";
+		} else
+			return "redirect:/index";
 	}
 
 	/**
 	 * Método like que recibe los likes del usuario
+	 * 
 	 * @param id1
 	 * @param id2
 	 * @return redirect
@@ -122,9 +115,11 @@ public class HomeController {
 		model.addAttribute("userList", userService.list());
 		return "listprofilesnuevo";
 	}
-	
+
 	/**
-	 * Método que envía la información del dislike para guardarla en la base de datos
+	 * Método que envía la información del dislike para guardarla en la base de
+	 * datos
+	 * 
 	 * @param idPerfil
 	 * @param idDislike
 	 * @return contactos
@@ -137,5 +132,5 @@ public class HomeController {
 		model.addAttribute("userList", userService.list());
 		return "listprofilesnuevo";
 	}
-	
+
 }
