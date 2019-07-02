@@ -99,6 +99,8 @@ public class HomeController {
 	}
 
 	
+	
+	
 	@GetMapping("/dislike")
 	public String dislike(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("-------UsuarioController dislike");
