@@ -46,7 +46,7 @@ public class ControladorServicioRest {
 	public void like(@RequestParam("id1") int id1, @RequestParam("id2") int id2) {
 		//logger.info("-------RestController dislike");
 		userService.like(id1, id2);
-	
+	}
 	//método que devuelve la lista de usuarios
 	@GetMapping("/listausuarios")
 	List<User> listausuarios(){
