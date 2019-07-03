@@ -17,13 +17,20 @@
 }
 
 /* no parecen los br */
-@media screen and (max-width: 1000px)
+/*@media screen and (max-width: 1000px){}*/
 .main > header br {
    display:enabled;
 }
-.content dark style1 featured{
-    background-image: url(/images/pareja-feliz.jpg);
+/*.content dark style1 featured{
+    background-image: url(images/pareja-feliz.jpg);
+}*/
+#img2{
+    background-image: url(images/pareja-feliz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2em;
 }
+
 #registro1{
     font-weight: bold;
     margin-top: 3%;
