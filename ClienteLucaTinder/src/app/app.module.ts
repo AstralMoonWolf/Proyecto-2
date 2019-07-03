@@ -7,6 +7,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 
 import { NewComponent } from './components/new/new.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NewComponent } from './components/new/new.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

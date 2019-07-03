@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,7 @@ import com.lucatinder.services.UserService;
 
 @RestController
 @RequestMapping("/lucatinder")
+//@CrossOrigin(origins = "*", maxAge = 3600)
 public class ControladorServicioRest {
 
 	@Autowired
@@ -53,8 +55,11 @@ public class ControladorServicioRest {
 	}
 	
 	//Metodo que devuelve el usuario creado 
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/new")
+	
 	public User update(@RequestBody User user) {
+		System.out.println("He pasado por aquí!!!!!!!!!!!!!!!!!!!!!!");
 		return userService.update(user);
 	}
 	

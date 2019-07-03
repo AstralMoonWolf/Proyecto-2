@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -7,7 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
-  constructor() { }
+  user: User = new User();
+
+  constructor(private router: Router, private userService: UserService) {
+
+   }
+
+   createUser(): void {
+    this.userService.createUser(this.user)
+        .subscribe( data => {
+          alert("Usuario generado de forma correcta.");
+        });
+
+  };
 
   ngOnInit() {
   }
