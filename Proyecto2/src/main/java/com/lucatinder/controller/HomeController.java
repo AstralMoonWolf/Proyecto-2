@@ -88,7 +88,6 @@ public class HomeController {
 			return "redirect:/index";
 	}
 
-	
 	@GetMapping("/like")
 	public String like(@RequestParam("id1") int id1, @RequestParam("id2") int id2, ModelMap model) {
 		logger.info("----UsuarioController like");

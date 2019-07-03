@@ -33,6 +33,9 @@ export class UserService {
   public getUser(user) {
     return this.http.get<User>(this.userUrl + "/profile/"+ user.id);
   }
+  public createUser(user) {
+    return this.http.post<User>(this.userUrl + "/new", user);
+  }
 
 }
 

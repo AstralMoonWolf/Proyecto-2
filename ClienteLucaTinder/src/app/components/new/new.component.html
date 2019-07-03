@@ -1,3 +1,23 @@
-<p>
-  new works!
-</p>
+<div class="col-md-6">
+  <h2 class="text-center">Añadir Usuario</h2>
+
+<form>
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="nombre" [(ngModel)]="user.nombre" placeholder= "Introduce tu nombre" name="nombre" class="form-control" id="login">
+  </div>
+
+ <!-- <div class="form-group">
+    <label for="edad">Fecha de Nacimiento:</label>
+    <input [(ngModel)]="user.edad" placeholder="dd/MM/yyyy" name="edad" class="form-control" id="edad">
+  </div>-->
+
+  <div class="form-group">
+    <label for="poblacion">Ciudad de Residencia:</label>
+    <input [(ngModel)]="user.poblacion" placeholder="¿Donde vives?" name="poblacion" class="form-control" id="poblacion">
+  </div>
+
+  <button class="button scrolly" (click)="createUser()">Dar de alta</button>
+</form> 
+</div>
+
