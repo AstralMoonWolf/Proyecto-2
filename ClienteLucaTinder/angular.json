@@ -8,11 +8,7 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -27,9 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
-            ],
+              "src/styles.css",
+              "../ClienteLucaTinder/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/main.css",
+              "src/assets/misestilos.css"
+              ],
             "scripts": []
           },
           "configurations": {
@@ -84,7 +82,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [

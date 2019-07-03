@@ -1,4 +1,7 @@
+
+
 /*@import url("fontawesome-all.min.css");*/
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic");
 
 /*
@@ -1545,7 +1548,7 @@ input, select, textarea {
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url("images/overlay.png");
+			/*background: url("images/overlay.png");*/
 		}
 
 		.image img {
@@ -1884,7 +1887,7 @@ input, select, textarea {
 			right: 1em;
 			width: 1.25em;
 			height: 75%;
-			background: url("images/arrow.svg") center center no-repeat;
+			/*background: url("images/arrow.svg") center center no-repeat;*/
 			background-size: contain;
 			z-index: 0;
 		}
@@ -1935,7 +1938,7 @@ input, select, textarea {
 		}
 
 	.dark form .select:before {
-		background: url("images/dark-arrow.svg") center center no-repeat;
+		/*background: url("images/dark-arrow.svg") center center no-repeat;*/
 		background-size: contain;
 	}
 
@@ -2182,7 +2185,7 @@ input, select, textarea {
 	#header {
 		position: relative;
 		margin: 0;
-		background-image: url("images/overlay.png"), url("../../images/header.jpg");
+		/*background-image: url("images/overlay.png"), url("../../images/header.jpg");*/
 		background-size: auto, cover;
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
@@ -2248,9 +2251,9 @@ input, select, textarea {
 				background: #433;
 			}
 
-			.main > .content.style1 {
+			/*.main > .content.style1 {*/
 				/*background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #b39c68, #a56365, #412e4c);*/
-                background-image:url(../../images/pareja-feliz.jpg);
+                /*background-image:url(../../images/pareja-feliz.jpg);
                 
                 background-repeat: no-repeat;
                 background-position: center;
@@ -2264,7 +2267,7 @@ input, select, textarea {
 
 			.main > .content.style3 {
 				background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #5f796b, #3a4e59, #2f394e);
-			}
+			}*/
 
 			.main > .content.style4 {
 				padding-top: 0;
