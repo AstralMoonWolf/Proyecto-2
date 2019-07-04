@@ -1,26 +1,27 @@
-<div class="col-md-6">
+<div  class="a">
   <h2>Lista de Usuarios</h2>
   
   <table class="table table-striped">
     <thead>
     <tr>
-      <th class="hidden">Id</th>
+      <th>Like</th>
       <th>Nombre</th>
       <th>Genero</th>
       <th>Edad</th>
       <th>Poblacion</th>
       <th>Descripcion</th>
+      <th>Dislike</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
-      <td class="hidden">{{user.Id}}</td>
+      <td><button class="btn btn-success" (click)="deleteUser(user)">Like</button></td>
       <td>{{user.nombre}}</td>
       <td>{{user.genero}}</td>
       <td>{{user.edad}}</td>
       <td>{{user.poblacion}}</td>
       <td>{{user.descripcion}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)">Dislike</button></td>
     </tr>
     </tbody>
   </table>
