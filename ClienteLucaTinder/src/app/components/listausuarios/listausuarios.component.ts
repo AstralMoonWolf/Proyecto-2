@@ -5,10 +5,12 @@ import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-lista-usuarios',
-  templateUrl: './lista-usuarios.component.html',
-  styleUrls: ['./lista-usuarios.component.css']
+  selector: 'app-listausuarios',
+  templateUrl: './listausuarios.component.html',
+  styleUrls: ['./listausuarios.component.css']
 })
+
+
 export class ListaUsuariosComponent implements OnInit {
 
   users: User[];
@@ -16,8 +18,9 @@ export class ListaUsuariosComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers()
-      .subscribe( data => {
+
+    this.userService.getAll().subscribe(
+      data => {
         this.users = data;
       });
   };

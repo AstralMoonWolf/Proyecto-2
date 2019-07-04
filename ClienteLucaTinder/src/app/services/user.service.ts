@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 //Nuevo
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
+import { Observable } from 'rxjs/internal/Observable';
+
 
 //Nuevo
 const httpOptions = {
@@ -20,7 +22,10 @@ export class UserService {
   private userUrl = 'http://localhost:8080/lucatinder';
   //private userUrl = '/api';
 
-  
+  public getAll(): Observable<User> {
+    return this.http.get(this.getUsers + '/listausuarios');
+  }
+
   public getUsers() {
     return this.http.get<User[]>(this.userUrl + "/listausuarios");
   }
@@ -33,6 +38,7 @@ export class UserService {
   public getUser(user) {
     return this.http.get<User>(this.userUrl + "/profile/"+ user.id);
   }
+
 
 }
 
