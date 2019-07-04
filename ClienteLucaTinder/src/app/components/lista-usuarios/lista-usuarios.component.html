@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users | slice:0:10;">
       <td><button class="btn btn-success" (click)="deleteUser(user)">Like</button></td>
       <td>{{user.nombre}}</td>
       <td>{{user.genero}}</td>
