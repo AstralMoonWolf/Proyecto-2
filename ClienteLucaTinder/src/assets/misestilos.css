@@ -134,3 +134,22 @@ div#login.input-group{
 	font-weight:bold;
 }
 
+.icon.brands.fa-twitter{
+    background-image: url(../assets/images/iconotwitter.jpg);
+    background-size: cover;
+}
+
+.icon.brands.fa-facebook-f{
+    background-image: url(../assets/images/iconofacebook.jpg);
+    background-size: cover;
+}
+
+.icon.brands.fa-instagram{
+    background-color: url(../assets/images/iconoinstagram.jpg);
+    background-size: cover;
+}
+
+.icon.brands.fa-github{
+    background-color: url(../assets/images/iconogithub.jpg);
+    background-size: cover;
+}
