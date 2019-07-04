@@ -32,8 +32,8 @@ export class UserService {
     return this.http.delete(this.userUrl + "/"+ user.id);
   }
 
-  public getUser(user) {
-    return this.http.get<User>(this.userUrl + "/profile/"+ user.id);
+  public getUser(id) {
+    return this.http.get<User>(this.userUrl + "/profile/"+ id);
   }
   public createUser(user) {
     return this.http.post<User>(this.userUrl + "/new", user);

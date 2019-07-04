@@ -25,7 +25,7 @@ import com.lucatinder.services.UserService;
 
 @RestController
 @RequestMapping("/lucatinder")
-//@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class ControladorServicioRest {
 
 	@Autowired

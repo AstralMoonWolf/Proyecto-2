@@ -9,13 +9,15 @@ import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuari
 import { NewComponent } from './components/new/new.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     ListaUsuariosComponent,
-    NewComponent
+    NewComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

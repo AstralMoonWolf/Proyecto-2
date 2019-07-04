@@ -1,0 +1,23 @@
+
+				<p id="tituloformu">Introduce tu ID de Usuario</p>
+				<!-- PONER EL NOMBRE FINAL DEL MÉTODO -->
+				<div class="form-group" id="formlogin">
+					<input type="number" #id name="id" class="form-control" placeholder="Introduce tu ID de Usuario" style="margin: auto">
+				</div>
+
+				<div class="col-md-12 text-center" id="formlogin">
+					<button type="submit"
+            class=" btn btn-block mybtn btn-primary tx-tfm" (click)="login(id.value)">Entrar a
+						lucaTinder</button>
+				</div>
+     
+      
+<!--
+      <div class="form-group">
+                                  <input type="number" #id name="id" class="form-control" placeholder="Ingrese ID de usuario"
+                                      style="margin: auto" min="1504">
+                              </div>
+                              <div class="col-md-12 text-center ">
+                                  <button type="submit"
+                                      class=" btn btn-block mybtn btn-primary tx-tfm" (click)="login(id.value)">Entrar</button>
+                              </div>-->
