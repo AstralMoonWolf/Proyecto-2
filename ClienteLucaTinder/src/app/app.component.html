@@ -4,24 +4,30 @@
         <img id="logoprincipal" src="../assets/images/logo3.png">
       </header>
       <footer>
-          
-          <button type="button" class="btn btn-secondary" data-toggle="tooltip"
-          data-placement="top" title="Tooltip on top"> <a routerLink="/login">Login</a>
-  </button>
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
-  data-placement="bottom" title="Tooltip on bottom"> <a routerLink="/new">Regístrate</a>
-</button>
-
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
-          data-placement="right" title="Tooltip on right"> <a routerLink="/profiles">Perfil de Usuario</a>
-  </button>
   
-  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
-          data-placement="left" title="Tooltip on left"> <a routerLink="/lista">Lista de Usuarios</a>
+
+<div id="menunav">
+          
+          <button type="button" class="btn btn-secondary" id="botonnav" data-toggle="tooltip"
+          data-placement="top" title="Tooltip on top" hidden> <a routerLink="/login" hidden>Login</a>
   </button>
+
+ 
+</div>
+  <!--<button type="button" class="btn btn-secondary" data-toggle="tooltip"
+          data-placement="right" title="Tooltip on right"> <a routerLink="/profiles">Perfil de Usuario</a>
+  </button>-->
+  
+ <!-- <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+          data-placement="left" title="Tooltip on left"> <a routerLink="/lista">Lista de Usuarios</a>
+  </button> -->
   
   <router-outlet></router-outlet>
+
+  <button type="button" class="btn btn-secondary" id="botonnav" data-toggle="tooltip"
+  data-placement="bottom" title="Tooltip on bottom" hidden> <a routerLink="/new" hidden>Regístrate</a>
+</button>
+
       </footer>
     </section>
     

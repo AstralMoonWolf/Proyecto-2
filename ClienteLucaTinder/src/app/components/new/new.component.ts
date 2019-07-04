@@ -17,18 +17,21 @@ export class NewComponent implements OnInit {
    }
 
    createUser(): void {
-    this.userService.createUser(this.user)
-        .subscribe( data => {
-          this.user = data;
-          
-          if (this.user == null) {
-            alert("Usuario no generado.");
-          } else {
-            alert("Usuario generado de forma correcta.");
-          }
-        });
-
+    this.userService.createUser(this.user).subscribe((user: any) => {
+      if (user) {
+        this.user = user;
+        this.userService.setPerfilLoggedIn(user);
+        console.log(user);
+        this.navigate();
+      } else {
+        console.log(`Usuario no encontrado`);
+      }
+    });
   };
+
+  navigate() {
+    this.router.navigateByUrl('/profiles');
+  }
 
   ngOnInit() {
   }

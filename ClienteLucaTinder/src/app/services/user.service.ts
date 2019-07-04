@@ -61,6 +61,10 @@ export class UserService {
   }
 
 
+  addLike(id1:number, id2:number){
+    return this.http.get(this.userUrl + "/" + id1 + "/" + id2);
+  }
+
 
 }
 
