@@ -1,29 +1,56 @@
-<div style="text-align:center">
-  <h1>{{ title }}!</h1>
+
     <section id="header" class="dark">
       <header>
         <img id="logoprincipal" src="../assets/images/logo3.png">
       </header>
       <footer>
   
-        <!--<app-login></app-login>-->
+
+
+          
+          <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+          data-placement="top" title="Tooltip on top"> <a routerLink="/login">Login</a>
+  </button>
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+  data-placement="bottom" title="Tooltip on bottom"> <a routerLink="/new">Regístrate</a>
+</button>
+
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+          data-placement="right" title="Tooltip on right"> <a routerLink="/profiles">Perfil de Usuario</a>
+  </button>
   
+  <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+          data-placement="left" title="Tooltip on left"> <a routerLink="/lista">Lista de Usuarios</a>
+  </button>
   
+  <router-outlet></router-outlet>
       </footer>
     </section>
 
-      <div class="content dark style1 featured" id="img2">
-          <div class="container">
-           <!--<app-profile></app-profile>-->
-            
     
-          </div>
+    <section id="footer">
+        <ul class="icons">
+          <li><a href="#" class="icon brands fa-twitter"><span
+              class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon brands fa-facebook-f"><span
+              class="label">Facebook</span></a></li>
+          
+        </ul>
+        <div class="copyright">
+          <ul class="menu">
+            <li>&copy; lucaTic - Grupo 01. Formación 18</li>
+            <br>
+            <li>Desing by: <br> Luis A. Ibáñez Rubio<br> Andreea
+              Iliescu<br>Raúl Algar Navarro<br> Pablo Tortosa
+            </li>
+          </ul>
         </div>
+      </section>
+
+
+        <!--<app-profile></app-profile>-->
 <!--<app-new></app-new>-->
-<a routerLink="/profiles">perfil</a><br>
-<a routerLink="/lista">lista</a><br>
-<a routerLink="/login">login</a><br>
-<a routerLink="/new">crear</a>
-<router-outlet></router-outlet>
-</div>
+
+
 
