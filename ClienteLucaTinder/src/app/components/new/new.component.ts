@@ -19,7 +19,13 @@ export class NewComponent implements OnInit {
    createUser(): void {
     this.userService.createUser(this.user)
         .subscribe( data => {
-          alert("Usuario generado de forma correcta.");
+          this.user = data;
+          
+          if (this.user == null) {
+            alert("Usuario no generado.");
+          } else {
+            alert("Usuario generado de forma correcta.");
+          }
         });
 
   };
