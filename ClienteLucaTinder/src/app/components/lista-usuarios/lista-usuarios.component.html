@@ -16,13 +16,13 @@
     </thead>
     <tbody>
     <tr *ngFor="let user of users | slice:0:10;">
-      <td><button class="btn btn-success" (click)="deleteUser(user)">Like</button></td>
+      <td><button class="btn btn-success" (click)='addLike(usersesion.id, user.id)'>Like</button></td>
       <td>{{user.nombre}}</td>
       <td>{{user.genero}}</td>
       <td>{{user.edad}}</td>
       <td>{{user.poblacion}}</td>
       <td>{{user.descripcion}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user)">Dislike</button></td>
+      <td><button class="btn btn-danger" (click)='disLike(usersesion.id, user.id)'>Dislike</button></td>
     </tr>
     </tbody>
   </table>

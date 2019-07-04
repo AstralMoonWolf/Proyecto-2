@@ -62,9 +62,11 @@ export class UserService {
 
 
   addLike(id1:number, id2:number){
-    return this.http.get(this.userUrl + "/" + id1 + "/" + id2);
+    return this.http.get(this.userUrl + "/like?id1=" + id1 + "&id2=" + id2);
   }
 
-
+  disLike(id1:number, id2:number){
+    return this.http.get(this.userUrl + "/dislike?id1=" + id1 + "&id2=" + id2);
+  }
 }
 
