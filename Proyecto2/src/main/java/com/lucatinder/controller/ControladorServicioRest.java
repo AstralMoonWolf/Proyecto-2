@@ -57,7 +57,6 @@ public class ControladorServicioRest {
 	//Metodo que devuelve el usuario creado 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("/new")
-	
 	public User update(@RequestBody User user) {
 		System.out.println("He pasado por aquí!!!!!!!!!!!!!!!!!!!!!!");
 		return userService.update(user);
