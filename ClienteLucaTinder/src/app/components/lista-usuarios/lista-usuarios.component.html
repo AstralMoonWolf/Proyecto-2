@@ -1,22 +1,25 @@
 <div class="col-md-6">
-  <h2> User Details</h2>
+  <h2>Lista de Usuarios</h2>
   
   <table class="table table-striped">
     <thead>
     <tr>
       <th class="hidden">Id</th>
       <th>Nombre</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Genero</th>
+      <th>Edad</th>
+      <th>Poblacion</th>
+      <th>Descripcion</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let user of users">
-      <td class="hidden">{{user.Nombre}}</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="hidden">{{user.Id}}</td>
+      <td>{{user.Nombre}}</td>
+      <td>{{user.Genero}}</td>
+      <td>{{user.Edad}}</td>
+      <td>{{user.Poblacion}}</td>
+      <td>{{user.Descripcion}}</td>
       <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
     </tr>
     </tbody>

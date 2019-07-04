@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 //Nuevo
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
+import { Observable } from 'rxjs';
 
 //Nuevo
 const httpOptions = {
@@ -14,6 +15,7 @@ const httpOptions = {
 })
 export class UserService {
   //Todo lo de la clase es nuevo
+  //public API = '//localhost:4200';
 
   constructor(private http:HttpClient) {}
 
@@ -35,6 +37,11 @@ export class UserService {
   }
   public createUser(user) {
     return this.http.post<User>(this.userUrl + "/new", user);
+  }
+
+   // LISTADO
+   getAll(): Observable<any> {
+    return this.http.get(this.userUrl + '/lista-usuarios');
   }
 
 }

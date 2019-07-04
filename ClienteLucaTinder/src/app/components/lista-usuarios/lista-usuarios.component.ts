@@ -10,14 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista-usuarios.component.css']
 })
 export class ListaUsuariosComponent implements OnInit {
-
-  users: User[];
+  users: Array<any>;
+  //users: User[];
 
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers()
-      .subscribe( data => {
+    this.userService.getAll().subscribe(
+      data => {
         this.users = data;
       });
   };
