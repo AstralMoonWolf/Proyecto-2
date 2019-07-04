@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ClienteLucaTinder';
   list = 'listausuarios';
+  profiles = 'profiles';
+  new = 'new';
+  login = 'login';
 }

@@ -12,17 +12,19 @@ import { UserService } from '../../services/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  users: User[];
+  user: User;
 
   constructor(private router: Router, private userService: UserService) {
 
   }
 
-  ngOnInit() {
-    this.userService.getUsers()
+  ngOnInit()
+  {
+    this.userService.getUser(this.user.id)
       .subscribe( data => {
-        this.users = data;
-      });
-  };
+        this.user = this.user;
+      })
+    //this.userService.getUser(this.user.idusuario)
+  }
 
 }
