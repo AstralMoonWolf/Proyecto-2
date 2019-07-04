@@ -21,7 +21,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit()
   {
-    //this.user = this.userService.getPerfilLoggedIn();
+    this.user = this.userService.getPerfilLoggedIn();
+    console.log(this.user);
     //console.log(this.userService.getPerfilLoggedIn());
     /*this.userService.getUser(this.userService.getPerfilLoggedIn().id)
       .subscribe( data => {
@@ -29,7 +30,7 @@ export class ProfileComponent implements OnInit {
       })*/
     //this.userService.getUser(this.user.idusuario)
 
-    this.userService.getUser(this.userService.getPerfilLoggedIn().id).subscribe((user: any) => {
+    /*this.userService.getUser(this.userService.getPerfilLoggedIn().id).subscribe((user: any) => {
       if (user) {
         this.user = user;
         this.userService.setPerfilLoggedIn(user);
@@ -38,7 +39,7 @@ export class ProfileComponent implements OnInit {
         console.log(`Usuario no encontrado`);
         //this.gotoList();
       }
-    });
+    });*/
 
   }
 
