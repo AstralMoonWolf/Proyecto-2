@@ -10,6 +10,8 @@ import { NewComponent } from './components/new/new.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { UserService } from './services/user.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     FormsModule  
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
