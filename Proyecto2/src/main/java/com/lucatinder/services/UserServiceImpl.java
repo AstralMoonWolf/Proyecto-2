@@ -88,6 +88,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User update(User user) {
 		return userDAO.save(user);
+		//return null;
 	}
 	@Override
 	public void listUsersGender(User user) {
