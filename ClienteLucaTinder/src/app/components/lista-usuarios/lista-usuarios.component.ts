@@ -7,11 +7,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-lista-usuarios',
   templateUrl: './lista-usuarios.component.html',
-  styleUrls: ['./lista-usuarios.component.css']
+  styleUrls: ['./lista-usuarios.component.css'],
+  providers: [UserService]
 })
 export class ListaUsuariosComponent implements OnInit {
-  users: Array<any>;
-  //users: User[];
+  //users: Array<any>;
+  users: User[];
 
   constructor(private router: Router, private userService: UserService) { }
 

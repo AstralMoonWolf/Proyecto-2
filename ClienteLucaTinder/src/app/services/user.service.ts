@@ -41,7 +41,7 @@ export class UserService {
 
    // LISTADO
    getAll(): Observable<any> {
-    return this.http.get(this.userUrl + '/lista-usuarios');
+    return this.http.get(this.userUrl + '/listausuarios');
   }
 
 }
