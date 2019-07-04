@@ -1,5 +1,6 @@
 package com.lucatinder.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,7 +19,7 @@ public class User {
 	private String nombre;
 	private String genero;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date edad;
+	private LocalDate edad;
 	private String poblacion;
 	private Integer idintereses;
 	private String descripcion;
@@ -46,10 +47,10 @@ public class User {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public Date getEdad() {
+	public LocalDate getEdad() {
 		return edad;
 	}
-	public void setEdad(Date edad) {
+	public void setEdad(LocalDate edad) {
 		this.edad = edad;
 	}
 	public String getPoblacion() {
